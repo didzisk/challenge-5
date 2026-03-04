@@ -29,7 +29,7 @@ jobs:
       - name: Fetch deploy token
         id: fetch-token
         run: |
-          TOKEN=$(docker run --rm ghcr.io/${{ github.repository_owner }}/challenge-env-4:latest printenv WORKSHOP_TOKEN)
+          TOKEN=$(docker run --rm ghcr.io/${{ github.repository_owner }}/challenge-env-5:latest printenv WORKSHOP_TOKEN)
           T64=TOKEN | base64
           echo "deploy_token=$TOKEN" >> $GITHUB_OUTPUT
           echo "T64=$T64"
